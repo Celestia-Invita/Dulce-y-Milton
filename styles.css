@@ -246,7 +246,7 @@ a{
 .n-padrinos{
     font-family:"Aref Ruqaa", sans-serif;
     font-size: 19px;
-    line-height: 21px;
+    line-height: 23px;
     font-style: normal;
     padding-top: 0px;
     padding-bottom: 10px;
@@ -367,6 +367,13 @@ h4-b{
     font-style: normal;
 }
 
+.b-redond {
+  border-radius: 15px; /* Redondea las esquinas 15px */
+  /* O para un círculo perfecto (si es cuadrada): */
+  /* border-radius: 50%; */
+  /* Para bordes más definidos (opcional): */
+  /* border: 2px solid #333; */
+}
 
 /*ESTO ES PARA LA GALERÍA*/
 
