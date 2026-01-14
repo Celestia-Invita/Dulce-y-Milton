@@ -115,6 +115,8 @@ h1{
     font-weight: lighter;
     text-align: center;
     width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .nombres{
