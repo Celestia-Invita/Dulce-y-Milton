@@ -43,7 +43,7 @@
  
     <div class="caja-t1">
         <h1 data-aos="zoom-in" data-aos-duration="3000">¡Nos casamos!</h1> <br>
-        <p class="cursiva">Acompáñanos a dar el SÍ más importante de nuestras vidas.</p>
+        <p class="cursiva">Hay momentos que sólo son perfectos si se comparten con las personas que amamos.<br>¡Acompáñanos!</p>
         <br>
         <p class="nombres">Dulce</p>
         <br>
@@ -60,17 +60,15 @@
     </div>
 
     <div class="caja-cita">
+        <p class="padrinos">Con la bendición de Dios y<br>de nuestros queridos padres</p>
         <p class="padrinos">Padres de la novia</p>
-        <p class="papas">Cesar Ramón Mesina Plascencia
+        <p class="n-padrinos">Cesar Ramón Mesina Plascencia
             <br> Rosa Elena Chávez Cordova</p>
-        <p class="padrinos"><br>Padres del novio</p>
-        <p class="papas">Lucino Rueda Torres 
+        <p class="padrinos">Padres del novio</p>
+        <p class="n-padrinos">Lucino Rueda Torres 
             <br>Maximina Cruz Antonio</p>
         <br>
-    </div>
-
-        <div class="caja-cita">
-        <p class="padrinos">Padrinos</p>
+        <p class="padrinos">Y en compañía de nuestros<br>Padrinos de Velación</p>
         <p class="n-padrinos">Herlinda Rueda Cruz<br>Eduardo Mejía Hernández</p>
         <br>
     </div>
@@ -78,7 +76,7 @@
     <div class="caja-t2" data-aos="zoom-in-down">
         <h2>Eucaristía</h2>
         <img src="iglesia.png" alt="img iglesia" width="120">
-        <p class="contenido">Iglesia Santo Domingo</p>
+        <p class="contenido">Iglesia Santo Domingo de Guzmán</p>
         <p class="contenido-chico">Santo Domingo Chihuitán</p>
         <br>
         <div class="hora-evento">13:00 hrs.</div>
@@ -93,15 +91,13 @@
         <p class="contenido">Domo municipal</p>
         <p class="contenido-chico">Santo Domingo Chihuitán</p>
         <br>
-        <div class="hora-evento">14:30 hrs.</div>
+        <div class="hora-evento">14:00 hrs.</div>
         <br>
         <div class="boton-dorado"> <a id="ubi-salon" href="https://maps.app.goo.gl/NmfM46gKkYPR98Z99" target="_blank"> Cómo llegar </a> </div>
         <br>
         <br>
     </div>
 
-
-    
 
     <div class="caja-t3">
         <h3>Galería</h3>
@@ -110,17 +106,44 @@
         <div class="galeria-collage">
             <img src="G-1.jpeg" class="foto vertical">
             <img src="G-6.jpeg" class="foto vertical">
+            <img src="G-9.jpeg" class="foto vertical">
             <img src="G-10.jpeg" class="foto vertical">
             <img src="G-12.jpeg" class="foto vertical">
             <img src="G-14.jpeg" class="foto vertical">
             <img src="G-15.jpeg" class="foto vertical">
             <img src="G-19.jpeg" class="foto vertical">
+            <img src="G-20.jpeg" class="foto vertical">
             <img src="G-21.jpeg" class="foto vertical">
             <img src="G-22.jpeg" class="foto vertical">
+            <img src="G-23.jpeg" class="foto vertical">
         </div>
-
-
     </div>
+
+    <div class="caja-t3">
+        <h3>Galería</h3>
+        <img src="camara.png" alt="imgcámara" width="120">
+        
+        <div class="slider">
+            <div class="slider-track">
+                <div class="slide"><img src="G-1.jpeg" alt=""></div>
+                <div class="slide"><img src="G-6.jpeg" alt=""></div>
+                <div class="slide"><img src="G-9.jpeg" alt=""></div>
+                <div class="slide"><img src="G-10.jpeg" alt=""></div>
+                <div class="slide"><img src="G-12.jpeg" alt=""></div>
+                <div class="slide"><img src="G-14.jpeg" alt=""></div>
+                <div class="slide"><img src="G-15.jpeg" alt=""></div>
+                <div class="slide"><img src="G-19.jpeg" alt=""></div>
+                <div class="slide"><img src="G-20.jpeg" alt=""></div>
+                <div class="slide"><img src="G-21.jpeg" alt=""></div>
+                <div class="slide"><img src="G-22.jpeg" alt=""></div>
+                <div class="slide"><img src="G-23.jpeg" alt=""></div>
+            </div>
+        </div>
+        
+    </div>
+
+
+
 
     <div class="caja-cita">
         <p class="cita">Encontré al amor de mi vida;<br>lo abracé y no lo soltaré.</p>
@@ -245,6 +268,31 @@
     overlay.addEventListener('click', cerrarTodo);
 </script>
 
+<script>
+const track = document.querySelector('.slider-track');
+const slides = document.querySelectorAll('.slide');
+
+function actualizarSlideCentral() {
+  const trackRect = track.getBoundingClientRect();
+  const centroTrack = trackRect.left + trackRect.width / 2;
+
+  slides.forEach(slide => {
+    const rect = slide.getBoundingClientRect();
+    const centroSlide = rect.left + rect.width / 2;
+
+    const distancia = Math.abs(centroTrack - centroSlide);
+
+    if (distancia < rect.width / 2) {
+      slide.classList.add('activa');
+    } else {
+      slide.classList.remove('activa');
+    }
+  });
+}
+
+track.addEventListener('scroll', actualizarSlideCentral);
+window.addEventListener('load', actualizarSlideCentral);
+</script>
 
 
 </body>

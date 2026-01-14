@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding:0;
-    padding-top: 2%;
+    
     text-align: center;
     box-sizing: border-box;
 }
@@ -16,6 +16,8 @@ body{
     }
 
 .caja-video{
+    width: 100%;
+    background-color: rgb(255, 254, 247);
     padding-top:10%;
     padding-bottom: 10%;
 }
@@ -71,6 +73,8 @@ body{
     margin:auto;
     margin-bottom: 1cm;
     margin-top: 1cm;
+    margin-left: 2%;
+    margin-right: 2%;
 
     border-top: 1px solid;
     border-bottom: 1px solid;
@@ -101,6 +105,7 @@ h1{
     font-size:70px;
     font-weight: lighter;
     text-align: center;
+    padding-top: 2%;
 }
 
 .cursiva{
@@ -119,7 +124,7 @@ h1{
     font-weight:normal;
     text-align: center;
     width: auto;
-    
+    padding-top: 2%;
 }
 
 .entimes{
@@ -129,8 +134,8 @@ h1{
     font-weight:lighter;
     text-align: center;
     width: auto;
-    margin-top: -0.9cm;
-    margin-bottom: -0.9cm;
+    margin-top: -0.7cm;
+    margin-bottom: -0.7cm;
 }
 
 h2{
@@ -139,6 +144,7 @@ h2{
     font-size:35px;
     font-weight:lighter;
     text-align: center;
+    padding-top: 3%;
     padding-bottom: 10px;
     width: auto;
     height: auto;
@@ -253,6 +259,7 @@ h3{
     font-size:35px;
     font-weight:lighter;
     text-align: center;
+    padding-top: 15px;
     padding-bottom: 10px;
     width: auto;
     height: auto;
@@ -333,6 +340,7 @@ h4{
     font-size: 18px;
     font-weight:normal ;
     font-style: normal;
+    padding-top: 3%;
 }
 
 h4-b{
@@ -448,6 +456,63 @@ body.modal-abierto {
 }
 
 
+
+/*ESTO ES PARA LA GALERÍA*/
+.slider {
+  width: 100%;
+  overflow: hidden;
+  padding: 30px 0;
+}
+
+.slider-track {
+  display: flex;
+  gap: 1px; /*Estaba en 14px, con 1px o 0,1cm se logra un poco más juntas*/
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+.slider-track::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  flex: 0 0 85%; /* 🔑 una foto grande y central ----- ESTABA EN 76%*/
+  scroll-snap-align: center;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  transform: scale(0.7);   /* 🔹 laterales */
+  opacity: 0.7;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;          /* 🔑 deja la proporción original */
+  /*max-height: 70vh;*/
+
+  border-radius: 20px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.3);
+}
+
+.slide {
+  background: linear-gradient(
+    to bottom,
+    #f7f7f7,
+    #ffffff
+  );
+  border-radius: 12px;
+}
+
+
+/*Un extra "" */
+
+.slide.activa {
+  transform: scale(1);      /* 🔹 central */
+  opacity: 1;
+}
 
 
 
